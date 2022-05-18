@@ -1,35 +1,11 @@
-const getElement = React.createElement;
+import components from './components/index.js'
 
-const header = getElement(
-    'h1', null,
-    'header created by React.createElement'
-)
-
-class MyComponent extends React.Component {
-    constructor() {
-        super()
-    };
-    render = () => getElement("div", null, "React.Component")
-}
-const myComponent = new MyComponent();
-
-class MyPureComponent extends React.PureComponent {
-    constructor() {
-        super()
-    };
-    render = () => getElement('p', null, "i'm pure component")
-}
-const pureComponent = new MyPureComponent();
-
-const fnComponent = () => getElement('div', null, 'im functional component')
-const reactApp = getElement(
-    'div',
-    null, [header,
-        myComponent.render(),
-        pureComponent.render(),
-        fnComponent(),
-    ]
-)
+const componentBundle = components.getBundle([
+    components.simple,
+    components.functional(),
+    new components.plain().render(),
+    new components.pure().render(),
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(reactApp);
+root.render(componentBundle);
