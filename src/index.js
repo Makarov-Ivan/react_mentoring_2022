@@ -1,4 +1,5 @@
 import components from './components/index.js'
+import ReactDOM from 'react-dom';
 
 const componentBundle = components.getBundle([
     components.simple,
