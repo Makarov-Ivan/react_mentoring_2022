@@ -5,5 +5,9 @@ export default class MyComponent extends React.Component {
     constructor() {
         super()
     };
-    render = () => getElement("div", null, "I'm created by React.Component")
+    render(){
+        return <div>
+            I'm created by React.Component with JSX!!
+        </div>
+    }
 }
