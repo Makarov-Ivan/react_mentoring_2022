@@ -1,7 +1,7 @@
-import simple from "./component.js";
+import simple from "./simpleComponent.js";
 import functional from "./functionalComponent.js"
-import plain from "./reactComponent.js"
-import pure from './reactPureComponent.js'
+import plain from "./component.js"
+import pure from './pureComponent.js'
 import getBundle from "./bundleComponents.js";
 
 export default {
