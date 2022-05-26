@@ -4,7 +4,9 @@
     "private": true,
     "dependencies": {},
     "scripts": {
-        "start": "webpack"
+        "run": "webpack serve --config ./webpackConfig/index.js --open",
+        "devBuild": "BUILD_TYPE=dev webpack --config ./webpackConfig/index.js",
+        "prodBuild": "BUILD_TYPE=prod webpack --config ./webpackConfig/index.js"
     },
     "eslintConfig": {
         "extends": [
@@ -35,6 +37,6 @@
         "react-dom": "^18.1.0",
         "webpack": "^5.72.1",
         "webpack-cli": "^4.9.2",
-        "webpack-dev-server": "^4.9.0"
+        "webpack-merge": "^5.8.0"
     }
 }
