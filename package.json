@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {},
     "scripts": {
-        "startHtml": "rm -rf ./dist && webpack"
+        "start": "rm -rf ./dist && webpack"
     },
     "eslintConfig": {
         "extends": [
